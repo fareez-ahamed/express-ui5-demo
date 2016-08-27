@@ -1,0 +1,23 @@
+{
+  "name": "meon-sample",
+  "description": "Sample Application for MEON Stack Application",
+  "main": "index.js",
+  "authors": [
+    "Fareez Ahamed"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "openui5-sap.ui.core": "openui5/packaged-sap.ui.core#latest",
+    "openui5-sap.m": "openui5/packaged-sap.m#latest",
+    "openui5-themelib_sap_bluecrystal": "openui5/packaged-themelib_sap_bluecrystal#latest"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
