@@ -23,6 +23,10 @@ var Person = require('./models/Person');
            });
        });
 
+        app.post('/api/persons', function(req, res) {
+            console.log(req);
+        });
+
        // route to handle creating goes here (app.post)
        // route to handle delete goes here (app.delete)
 
