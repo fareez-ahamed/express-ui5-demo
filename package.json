@@ -9,12 +9,15 @@
   "author": "Fareez Ahamed",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.4.3",
     "express": "^4.14.0",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-connect": "^0.10.1",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-eslint": "^15.0.0",
-    "grunt-openui5": "^0.7.0"
+    "grunt-openui5": "^0.7.0",
+    "method-override": "^2.0.2",
+    "mongoose": "^3.8.40"
   }
 }
