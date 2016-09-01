@@ -35,6 +35,7 @@ app.use(express.static(__dirname + '/public'));
 //OpenUI5 dependencies
 app.use(express.static(__dirname + '/bower_components/openui5-sap.ui.core'));
 app.use(express.static(__dirname + '/bower_components/openui5-sap.m'));
+app.use(express.static(__dirname + '/bower_components/openui5-sap.ui.layout'));
 app.use(express.static(__dirname + '/bower_components/openui5-themelib_sap_belize'));
 
 // routes ==================================================
