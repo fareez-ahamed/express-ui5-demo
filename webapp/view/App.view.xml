@@ -1,20 +1,74 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="todo.view.App" resourceBundleName="todo.i18n.messageBundle" resourceBundleAlias="i18n" displayBlock="true">
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+ 	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core" controllerName="todo.view.App" resourceBundleName="todo.i18n.messageBundle" resourceBundleAlias="i18n" displayBlock="true">
 	<Shell>
 		<App>
 			<Page title="{i18n>TITLE}" backgroundDesign="Solid">
 				<content>
-					<Input class="todoInput" value="{/newTodo}" placeholder="{i18n>INPUT_PLACEHOLDER}" change="addTodo" />
-					<List id="todo-list" items="{/todos}" select="toggleCompleted"
-						mode="MultiSelect"
-						growing="true"
-						growingScrollToLoad="true"
-						showNoData="false"
-						showSeparators="None"
-						rememberSelections="false">
-						<CustomListItem selected="{completed}">
-							<Input class="todoListInput" value="{title}" />
-						</CustomListItem>
-					</List>
+					<VBox class="sapUiSmallMargin">
+		<f:Form id="FormChange354"
+			minWidth="1024"
+			maxContainerCols="2"
+			editable="true">
+			<f:title>
+				<core:Title text="Address" />
+			</f:title>
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanL="3"
+					labelSpanM="3"
+					emptySpanL="4"
+					emptySpanM="4"
+					columnsL="1"
+					columnsM="1" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="Name">
+							<f:fields>
+								<Input value="{SupplierName}" id="name"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Street">
+							<f:fields>
+								<Input value="{Street}" />
+								<Input value="{HouseNumber}">
+									<layoutData>
+										<l:GridData span="L2 M2 S4" />
+									</layoutData>
+								</Input>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="ZIP Code/City">
+							<f:fields>
+								<Input value="{ZIPCode}">
+									<layoutData>
+										<l:GridData span="L2 M2 S4" />
+									</layoutData>
+								</Input>
+								<Input value="{City}" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Country">
+							<f:fields>
+								<Select width="100%" id="country" selectedKey="{Country}">
+									<items>
+										<core:Item text="Germany" key="Germany"/>
+										<core:Item text="USA" key="USA"/>
+										<core:Item text="England" key="England"/>
+									</items>
+								</Select>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</VBox>
 				</content>
 				<footer>
 					<Bar>
