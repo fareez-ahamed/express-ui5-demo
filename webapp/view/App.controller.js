@@ -5,19 +5,17 @@
 
 		onInit: function() {
 			this.oModel = new sap.ui.model.json.JSONModel({
-				newTodo: '',
-				todos: [
-					{
-						title: 'Start this app',
-						completed: true
-					},
-					{
-						title: 'Learn OpenUI5',
-						completed: false
+				contact : {
+					name : "John Doe",
+					address : {
+						door_no : "S2",
+						street : "2nd Street, Ravanan Nagar",
+						area : "Puzhudhivakkam",
+						city : "Chennai",
+						country : "India",
+						pin : "600091"
 					}
-				],
-				someCompleted: true,
-				completedCount: 1
+				}
 			});
 			this.getView().setModel(this.oModel);
 		},

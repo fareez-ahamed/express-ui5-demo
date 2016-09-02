@@ -30,13 +30,13 @@
 					<f:formElements>
 						<f:FormElement label="Name">
 							<f:fields>
-								<Input value="{SupplierName}" id="name"/>
+								<Input value="{/name}" id="name"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Street">
 							<f:fields>
-								<Input value="{Street}" />
-								<Input value="{HouseNumber}">
+								<Input value="{/address/street}" />
+								<Input value="{/address/door_no}">
 									<layoutData>
 										<l:GridData span="L2 M2 S4" />
 									</layoutData>
@@ -45,21 +45,22 @@
 						</f:FormElement>
 						<f:FormElement label="ZIP Code/City">
 							<f:fields>
-								<Input value="{ZIPCode}">
+								<Input value="{/address/pin}">
 									<layoutData>
 										<l:GridData span="L2 M2 S4" />
 									</layoutData>
 								</Input>
-								<Input value="{City}" />
+								<Input value="{/address/city}" />
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Country">
 							<f:fields>
-								<Select width="100%" id="country" selectedKey="{Country}">
+								<Select width="100%" id="country" selectedKey="{/address/country}">
 									<items>
 										<core:Item text="Germany" key="Germany"/>
 										<core:Item text="USA" key="USA"/>
 										<core:Item text="England" key="England"/>
+										<core:Item text="India" key="India"/>
 									</items>
 								</Select>
 							</f:fields>
